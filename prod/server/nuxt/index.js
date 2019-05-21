@@ -10,8 +10,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_swplugin_03f07e09 from 'nuxt_plugin_swplugin_03f07e09' // Source: ./sw.plugin.js (mode: 'client')
-import nuxt_plugin_nuxticons_78cb7ed8 from 'nuxt_plugin_nuxticons_78cb7ed8' // Source: ./nuxt-icons.js (mode: 'all')
 import nuxt_plugin_buefy_53336fc1 from 'nuxt_plugin_buefy_53336fc1' // Source: ./buefy.js (mode: 'all')
 import nuxt_plugin_axios_dd571f20 from 'nuxt_plugin_axios_dd571f20' // Source: ./axios.js (mode: 'all')
 
@@ -131,14 +129,6 @@ async function createApp(ssrContext) {
   }
 
   // Plugin execution
-
-  if (process.client && typeof nuxt_plugin_swplugin_03f07e09 === 'function') {
-    await nuxt_plugin_swplugin_03f07e09(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_nuxticons_78cb7ed8 === 'function') {
-    await nuxt_plugin_nuxticons_78cb7ed8(app.context, inject)
-  }
 
   if (typeof nuxt_plugin_buefy_53336fc1 === 'function') {
     await nuxt_plugin_buefy_53336fc1(app.context, inject)
