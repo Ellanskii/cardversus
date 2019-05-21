@@ -18,7 +18,8 @@
     "express": "^4.16.4",
     "nuxt": "^2.4.0",
     "nuxt-buefy": "^0.3.2",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
