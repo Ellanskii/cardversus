@@ -1,3 +1,13 @@
 node_modules
 dist
 nuxt
+
+firebase-debug\.log
+
+src/\.DS_Store
+
+prod/client/assets/client/
+
+*.map
+
+*.cache
