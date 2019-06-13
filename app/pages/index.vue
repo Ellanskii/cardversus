@@ -1,10 +1,7 @@
-<template>
-  <div class="container">
-    <div class="columns" v-if="isLoaded">
-      <TheUserInfo class="column is-narrow is-3" />
-      <TheTimeLine class="column is-narrow is-9" />
-    </div>
-  </div>
+<template lang="pug">
+.hero.is-primary.is-medium
+  .hero-body
+    h1.title Hello world
 </template>
 
 <script>

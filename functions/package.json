@@ -14,13 +14,15 @@
     "htmlspecialchars": "^1.0.5",
     "lodash.clonedeep": "^4.5.0",
     "nuxt": "2.8.1",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
     "uuid": "^3.3.2",
     "vuexfire": "3.0.0"
   },
   "devDependencies": {
+    "core-js": "2.6.5",
     "firebase-tools": "^7.0.0",
-    "prettier": "^1.18.2",
-    "core-js": "2.6.5"
+    "prettier": "^1.18.2"
   },
   "engines": {
     "node": "8"
