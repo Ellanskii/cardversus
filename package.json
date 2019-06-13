@@ -1,27 +1,39 @@
 {
-  "name": "Nuxt-SSR-Firebase",
-  "version": "0.2.0",
-  "description": "Nuxt.js 2 app with SSR using Firebase Cloud Functions and Firebase Hosting.",
-  "license": "MIT",
-  "author": "David Royer",
-  "repository": "https://github.com/davidroyer/nuxt-ssr-firebase",
+  "name": "nuxt-firebase-example",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "HANATANI Takuma <mail@potato4d.me>",
+  "private": true,
   "scripts": {
-    "dev": "cd \"src\" && yarn dev",
-    "build": "yarn build:nuxt && yarn clean && yarn copyassets",
-    "serve": "NODE_ENV=development firebase serve",
-    "deploy": "firebase deploy",
-    "predeploy": "yarn build",
-    "setup": "yarn install && yarn setup:client && yarn setup:server",
-    "setup:client": "cd \"src\" && yarn install",
-    "setup:server": "cd \"prod/server\" && yarn install",
-    "copyassets": "yarn copydist && yarn copystatic",
-    "copydist": "cp -R prod/server/nuxt/dist/ prod/client/assets",
-    "copystatic": "cp -R src/static/ prod/client",
-    "clean": "rimraf prod/client/assets/* && rimraf prod/client/*.*",
-    "build:nuxt": "cd \"src\" && yarn build"
+    "dev": "nuxt",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "build:nuxt": "nuxt build",
+    "heroku-postbuild": "npm run build # for Heroku",
+    "build": "yarn clean;yarn build:nuxt;yarn copy # for Firebase",
+    "clean": "rm -rf {dist,.nuxt}",
+    "copy": "mkdir dist;cp -R functions dist/server;cp -R app/static/ dist/client;cp -R .nuxt dist/server;cp -R dist/server/.nuxt/dist dist/client/assets",
+    "format": "prettier './app/**/*.{js,vue}' --write",
+    "deploy": "firebase deploy"
+  },
+  "dependencies": {
+    "autolinker": "^3.1.0",
+    "bulma": "0.7.5",
+    "dayjs": "^1.8.14",
+    "firebase": "^6.1.1",
+    "firebase-tools": "^7.0.0",
+    "htmlspecialchars": "^1.0.5",
+    "lodash.clonedeep": "^4.5.0",
+    "nuxt": "2.8.1",
+    "uuid": "^3.3.2",
+    "vuexfire": "3.0.0"
   },
   "devDependencies": {
-    "cross-env": "^5.0.5",
-    "rimraf": "^2.6.2"
+    "prettier": "^1.18.2",
+    "core-js": "2.6.5"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }

@@ -1,13 +1,15 @@
+# dependencies
 node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
 dist
-nuxt
 
-firebase-debug\.log
-
-src/\.DS_Store
-
-prod/client/assets/client/
-
-*.map
-
-*.cache
+.envrc
+.firebase
+.firebaserc
