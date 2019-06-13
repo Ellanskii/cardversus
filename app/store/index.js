@@ -3,10 +3,10 @@ import { vuexfireMutations, firebaseAction } from 'vuexfire'
 import cloneDeep from 'lodash.clonedeep'
 const firestore = firebase.firestore()
 
-if (process.browser) {
-  const settings = { timestampsInSnapshots: true }
-  firestore.settings(settings)
-}
+// if (process.browser) {
+//   const settings = { timestampsInSnapshots: true }
+//   firestore.settings(settings)
+// }
 
 const provider = new firebase.auth.GoogleAuthProvider()
 
