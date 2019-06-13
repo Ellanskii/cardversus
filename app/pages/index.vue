@@ -27,13 +27,13 @@ export default {
   },
   async mounted() {
     let user
-    if (!this.user) user = await auth()
+    // if (!this.user) user = await auth()
     await Promise.all([
-      this.user
-        ? Promise.resolve()
-        : this.$store.dispatch('setCredential', { user: user || null }),
+      // this.user
+      //   ? Promise.resolve()
+      //   : this.$store.dispatch('setCredential', { user: user || null }),
       this.posts.length ? Promise.resolve() : this.$store.dispatch('initPosts'),
-      this.users.length ? Promise.resolve() : this.$store.dispatch('initUsers')
+      // this.users.length ? Promise.resolve() : this.$store.dispatch('initUsers')
     ])
     this.loadComplete()
   },

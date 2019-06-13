@@ -1,5 +1,5 @@
 import firebase from '~/plugins/firebase'
-import { vuexfireMutations, firebaseAction } from 'vuexfire'
+import { vuexfireMutations, firestoreAction } from 'vuexfire'
 import cloneDeep from 'lodash.clonedeep'
 const firestore = firebase.firestore()
 
@@ -70,27 +70,27 @@ export const actions = {
       .get()
     commit('savePost', { post: snapshot.data() })
   },
-  initUsers: firebaseAction(({ bindFirebaseRef }) => {
-    const usersCollection = firestore.collection('users')
-    bindFirebaseRef('users', usersCollection)
-  }),
-  initPosts: firebaseAction(({ bindFirebaseRef }) => {
+  // initUsers: firebaseAction(({ bindFirebaseRef }) => {
+  //   const usersCollection = firestore.collection('users')
+  //   bindFirebaseRef('users', usersCollection)
+  // }),
+  initPosts: firestoreAction(({ bindFirestoreRef }) => {
     const postsCollection = firestore
       .collection('posts')
-      .orderBy('createdAt', 'desc')
-    bindFirebaseRef('posts', postsCollection)
+      // .orderBy('createdAt', 'desc')
+    bindFirestoreRef('posts', postsCollection)
   }),
-  addPost: firebaseAction((ctx, { id, email, body, createdAt }) => {
-    firestore
-      .collection('posts')
-      .doc(`${id}`)
-      .set({
-        id,
-        from: email,
-        body,
-        createdAt
-      })
-  }),
+  // addPost: firebaseAction((ctx, { id, email, body, createdAt }) => {
+  //   firestore
+  //     .collection('posts')
+  //     .doc(`${id}`)
+  //     .set({
+  //       id,
+  //       from: email,
+  //       body,
+  //       createdAt
+  //     })
+  // }),
   callAuth() {
     firebase.auth().signInWithRedirect(provider)
   },
