@@ -1,15 +1,14 @@
 {
-  "name": "nuxt-firebase-example",
+  "name": "card-versus",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
-  "author": "HANATANI Takuma <mail@potato4d.me>",
+  "description": "Bank products comparison",
+  "author": "Elijah Ellanski <nameimprobable@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "build:nuxt": "nuxt build",
-    "heroku-postbuild": "npm run build # for Heroku",
     "build": "yarn clean;yarn build:nuxt;yarn copy # for Firebase",
     "clean": "rm -rf {dist,.nuxt}",
     "copy": "mkdir dist;cp -R functions dist/server;cp -R app/static/ dist/client;cp -R .nuxt dist/server;cp -R dist/server/.nuxt/dist dist/client/assets",

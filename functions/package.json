@@ -1,8 +1,8 @@
 {
-  "name": "nuxt-firebase-example-functions",
+  "name": "card-versus-functions",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
-  "author": "HANATANI Takuma <mail@potato4d.me>",
+  "description": "Bank products comparison",
+  "author": "Elijah Ellanski <nameimprobable@gmail.com>",
   "private": true,
   "dependencies": {
     "autolinker": "^3.1.0",
