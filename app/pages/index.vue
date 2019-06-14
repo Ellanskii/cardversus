@@ -2,12 +2,16 @@
 .hero.is-primary.is-medium
   .hero-body
     h1.title Hello world
+    .container: .columns
+      .column.is-3
+        CreditCard(:card="{background: 'red'}").is-hoverable
+      .column.is-3
+        CreditCard(:card="{background: 'tomato'}").is-hoverable
 </template>
 
 <script>
 import auth from '~/plugins/auth'
-import TheTimeLine from '~/components/TheTimeLine.vue'
-import TheUserInfo from '~/components/TheUserInfo.vue'
+import CreditCard from '~/components/CreditCard'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
@@ -22,8 +26,7 @@ export default {
     }
   },
   components: {
-    TheTimeLine,
-    TheUserInfo
+    CreditCard
   },
   async mounted() {
     let user
