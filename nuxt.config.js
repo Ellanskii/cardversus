@@ -17,9 +17,15 @@ export default {
   /*
    ** Customize the progress bar color
    */
-  css: ['~/assets/scss/index.scss'],
+  css: ['~/assets/styles/index.scss'],
+  styleResources: {
+    scss: ['~/assets/styles/_variables.scss']
+  },
   loading: { color: '#00d1b2' },
-  modules: [['nuxt-buefy', { css: false, materialDesignIcons: false }]],
+  modules: [
+    ['nuxt-buefy', { css: true, materialDesignIcons: false }],
+    '@nuxtjs/style-resources'
+  ],
   /*
    ** Build configuration
    */

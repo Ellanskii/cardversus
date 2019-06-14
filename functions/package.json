@@ -5,6 +5,7 @@
   "author": "Elijah Ellanski <nameimprobable@gmail.com>",
   "private": true,
   "dependencies": {
+    "@nuxtjs/style-resources": "^0.1.2",
     "autolinker": "^3.1.0",
     "bulma": "0.7.5",
     "dayjs": "^1.8.14",
