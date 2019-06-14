@@ -38,6 +38,6 @@ export default {
     MESSAGINGSENDERID: process.env.MESSAGINGSENDERID
   },
   build: {
-    publicPath: '/assets/'
+    publicPath: '/assets/',
   }
 }
