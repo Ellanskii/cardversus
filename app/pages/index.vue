@@ -32,7 +32,7 @@ export default {
       // this.user
       //   ? Promise.resolve()
       //   : this.$store.dispatch('setCredential', { user: user || null }),
-      this.posts.length ? Promise.resolve() : this.$store.dispatch('initPosts'),
+      this.posts.length ? Promise.resolve() : this.$store.dispatch('initPosts')
       // this.users.length ? Promise.resolve() : this.$store.dispatch('initUsers')
     ])
     this.loadComplete()
@@ -46,10 +46,11 @@ export default {
 }
 </script>
 
-<style scoped>
-.container {
-  display: flex;
-  align-items: flex-start;
-  /* flex-direction: column; */
+<style lang="scss">
+$test: red;
+.hero {
+  .title {
+    color: $test !important;
+  }
 }
 </style>
