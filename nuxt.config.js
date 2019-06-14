@@ -3,31 +3,26 @@ const webpack = require('webpack')
 export default {
   srcDir: 'app',
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: 'Nuxt Firebase SNS Example',
+    title: 'Card Versus',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
-    link: [
-      { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
-  ** Customize the progress bar color
-  */
-  css: [
-    '~/assets/base.css'
-  ],
+   ** Customize the progress bar color
+   */
+  css: ['~/assets/scss/index.scss'],
   loading: { color: '#00d1b2' },
+  modules: [['nuxt-buefy', { css: false, materialDesignIcons: false }]],
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   env: {
     APIKEY: process.env.APIKEY,
     AUTHDOMAIN: process.env.AUTHDOMAIN,
@@ -37,6 +32,6 @@ export default {
     MESSAGINGSENDERID: process.env.MESSAGINGSENDERID
   },
   build: {
-    publicPath: '/assets/',
+    publicPath: '/assets/'
   }
 }
