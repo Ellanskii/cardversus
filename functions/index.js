@@ -1,6 +1,7 @@
 const functions = require('firebase-functions')
 const { Nuxt } = require('nuxt')
 const express = require('express')
+const telegraf = require('telegraf')
 const app = express()
 
 const envs = functions.config().environment
@@ -30,3 +31,22 @@ function handleRequest(req, res) {
 
 app.use(handleRequest)
 exports.ssr = functions.https.onRequest(app)
+
+// Send notification to Telegram when new comment added
+exports.createStory = functions.firestore
+  .document('comments/{commentId}')
+  .onCreate((snap, context) => {
+    const bot = new telegraf.Telegram(functions.config().bot.token)
+    const message = `${snap.data().name} left new comment`
+    return bot.sendMessage(
+      functions.config().bot.chat,
+      message
+    );
+    // const id = context.params.storyId
+    // firestore.doc(`storiesList/${id}`).set({
+    //   title: snap.data().title,
+    //   createdAt: snap.data().createdAt || admin.database.ServerValue.TIMESTAMP,
+    //   geopoint: snap.data().geopoint || null,
+    //   hasAudio: snap.data().audio ? true : false
+    // })
+  })
