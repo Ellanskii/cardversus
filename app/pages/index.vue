@@ -1,13 +1,21 @@
 <template lang="pug">
-.hero.is-primary.is-medium
+.hero.is-medium
   .hero-body
     h1.title Hello world
+    .container: .columns
+      .column.is-3
+        CreditCard(:card="{background: 'red'}").is-hoverable.is-rocketbank
+        h2.title Рокетбанк
+        p.subtitle Дебетовая карта
+      .column.is-3
+        CreditCard(:card="{background: 'tomato'}").is-hoverable.is-alfabank
+      .column.is-3
+        CreditCard(:card="{background: 'tomato'}").is-hoverable.is-tinkoff
 </template>
 
 <script>
 import auth from '~/plugins/auth'
-import TheTimeLine from '~/components/TheTimeLine.vue'
-import TheUserInfo from '~/components/TheUserInfo.vue'
+import CreditCard from '~/components/CreditCard'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
@@ -22,8 +30,7 @@ export default {
     }
   },
   components: {
-    TheTimeLine,
-    TheUserInfo
+    CreditCard
   },
   async mounted() {
     let user
@@ -47,10 +54,5 @@ export default {
 </script>
 
 <style lang="scss">
-$test: red;
-.hero {
-  .title {
-    color: $test !important;
-  }
-}
+
 </style>

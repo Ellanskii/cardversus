@@ -1,20 +1,16 @@
-<template>
-  <div id="app">
-    <div class="wrapper wrapper-loading" v-if="!isLoaded"><TheLoading /></div>
-    <div class="wrapper wrapper-loaded" v-show="isLoaded"><nuxt /></div>
-    <TheForkCorners />
-  </div>
+<template lang="pug">
+  #app
+    nuxt/
+    TheFooter
 </template>
 
 <script>
-import TheLoading from '~/components/TheLoading.vue'
-import TheForkCorners from '~/components/TheForkCorners.vue'
+import TheFooter from '~/components/TheFooter'
 import { mapGetters } from 'vuex'
 
 export default {
   components: {
-    TheLoading,
-    TheForkCorners
+    TheFooter
   },
   computed: {
     ...mapGetters(['isLoaded'])
