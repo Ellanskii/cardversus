@@ -26,6 +26,9 @@ export default {
     ['nuxt-buefy', { css: true, materialDesignIcons: false }],
     '@nuxtjs/style-resources'
   ],
+  router: {
+    middleware: 'router-auth'
+  },
   /*
    ** Build configuration
    */
@@ -38,6 +41,6 @@ export default {
     MESSAGINGSENDERID: process.env.MESSAGINGSENDERID
   },
   build: {
-    publicPath: '/assets/',
+    publicPath: '/assets/'
   }
 }
