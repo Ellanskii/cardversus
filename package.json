@@ -19,6 +19,7 @@
     "@nuxtjs/style-resources": "^0.1.2",
     "autolinker": "^3.1.0",
     "bulma": "0.7.5",
+    "clone-deep": "^4.0.1",
     "dayjs": "^1.8.14",
     "firebase": "^6.1.1",
     "firebase-tools": "^7.0.0",

@@ -40,6 +40,9 @@ export default {
     STORAGEBUCKET: process.env.STORAGEBUCKET,
     MESSAGINGSENDERID: process.env.MESSAGINGSENDERID
   },
+  plugins: [
+    '~/plugins/fireauth.js'
+  ],
   build: {
     publicPath: '/assets/'
   }
