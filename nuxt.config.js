@@ -27,7 +27,9 @@ export default {
     '@nuxtjs/style-resources'
   ],
   router: {
-    middleware: 'router-auth'
+    middleware: 'router-auth',
+    linkActiveClass: 'is-active',
+    linkExactActiveClass: 'is-exact-active'
   },
   /*
    ** Build configuration
