@@ -19,6 +19,7 @@
     "@nuxtjs/style-resources": "^0.1.2",
     "autolinker": "^3.1.0",
     "bulma": "0.7.5",
+    "clone-deep": "^4.0.1",
     "dayjs": "^1.8.14",
     "firebase": "^6.1.1",
     "firebase-tools": "^7.0.0",
@@ -31,6 +32,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "uuid": "^3.3.2",
+    "vuefire": "^2.0.0",
     "vuexfire": "3.0.0"
   },
   "devDependencies": {

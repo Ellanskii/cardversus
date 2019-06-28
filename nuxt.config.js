@@ -26,6 +26,11 @@ export default {
     ['nuxt-buefy', { css: true, materialDesignIcons: false }],
     '@nuxtjs/style-resources'
   ],
+  router: {
+    middleware: 'router-auth',
+    linkActiveClass: 'is-active',
+    linkExactActiveClass: 'is-exact-active'
+  },
   /*
    ** Build configuration
    */
@@ -37,6 +42,9 @@ export default {
     STORAGEBUCKET: process.env.STORAGEBUCKET,
     MESSAGINGSENDERID: process.env.MESSAGINGSENDERID
   },
+  plugins: [
+    '~/plugins/fireauth.js'
+  ],
   build: {
     publicPath: '/assets/'
   }
