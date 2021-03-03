@@ -21,7 +21,7 @@
     "node-sass": "^4.12.0",
     "nuxt": "2.8.1",
     "nuxt-buefy": "^0.3.7",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "telegraf": "^3.30.1",
